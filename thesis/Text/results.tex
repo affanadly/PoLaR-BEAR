@@ -1,0 +1,65 @@
+\chapter{Data Analysis and Results}\label{result}
+
+Here the results of the tests are presented. First, the parameters detected using PoLaR BEAR and BEAR are shown and compared to the true parameters. Second, the difference between the detections and the true parameters are observed, and the accuracy of the outputs of PoLaR BEAR and BEAR are compared to characterize the performance of PoLaR BEAR. 
+
+\section{Real FRB data}
+
+PoLaR BEAR was able to detect all 19 FRBs in all real FRB files. As a comparison, the original BEAR was only able to detect 14 out of 19 FRBs. The non-detections were from FRB 130729, FRB 140514, and the three FRB 200428 data due to small pulse widths, relatively low SNR, and updated header formatting respectively, for which the latter was easily overcome in PoLaR BEAR by adding them to the dictionary. The detected DM, W, and SNR for PoLaR BEAR and BEAR for each of the real FRBs are as shown in Table \ref{tab:frbres}.
+
+\input{Tables/frbresults}
+
+\section{Generated FRB data}
+
+PoLaR BEAR was able to detect 49 out of 50 FRBs in our sample of fake FRB data. Similarly, the original BEAR was also able to detect 49 out of 50 FRBs. Both programs were not able to detect Fake 19, which has one of the lowest SNR at 9.00864. The detected DM, W, and SNR for PoLaR BEAR and BEAR for each of the fake FRBs are as shown in Table \ref{tab:fakeres}.
+
+\input{Tables/fakeresults}
+
+\section{Difference in detections for PoLaR BEAR and BEAR}
+
+\subsection{Detection DM}
+
+Histograms of the DM difference in detections from PoLaR BEAR and BEAR for real FRB data and fake FRB data are shown in Figure \ref{fig:dmdiff}. The outliers here are defined to be data with DM difference of $\pm 10 \cmp$. For real FRB data, PoLaR BEAR has 1 outlier ($22 \cmp$) whereas BEAR has 2 outliers ($555.77 \cmp$, $27 \cmp$). For fake FRB data, both PoLaR BEAR and BEAR exhibited no outliers, with most detections occuring within $\pm 5 \cmp$. In both cases, it can be seen that PoLaR BEAR performs on par with BEAR, with detections close to the true DM. 
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{Graphs/frbdmdiff.eps}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{Graphs/fakedmdiff.eps}
+    \end{minipage}
+    \caption[Histograms of DM difference]{Histograms of DM difference in detections from PoLaR BEAR and BEAR for real FRB data (left) and fake FRB data (right).}
+    \label{fig:dmdiff}
+\end{figure}
+
+\subsection{Detection W}
+
+Histograms of the W difference in detections from PoLaR BEAR and BEAR for real FRB data and fake FRB data are shown in Figure \ref{fig:wdiff}. The outliers here are defined to be data with W difference of $\pm 10$ ms. For real FRB data, PoLaR BEAR exhibited no outliers whereas BEAR has 1 outlier ($1509$ ms). For fake FRB data, both PoLaR BEAR and BEAR exhibited no outliers, with most detections occuring within $\pm 2$ ms. It can be seen that for real FRBs, detections from BEAR do have smaller errors whereas PoLaR BEAR reports larger W. On the other hand, for fake FRBs, PoLaR BEAR was much more consistent with much more detections occuring close to the true W.
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{Graphs/frbwdiff.eps}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{Graphs/fakewdiff.eps}
+    \end{minipage}
+    \caption[Histograms of W difference]{Histograms of W difference in detections from PoLaR BEAR and BEAR for real FRB data (left) and fake FRB data (right).}
+    \label{fig:wdiff}
+\end{figure}
+
+\subsection{Detection SNR}
+
+Histograms of the SNR difference in detections from PoLaR BEAR and BEAR for real FRB data and fake FRB data are shown in Figure \ref{fig:snrdiff}. The outliers here are defined to be data with SNR difference of $\pm 30$. For real FRB data, PoLaR BEAR exhibited no outliers whereas BEAR has 1 outlier ($-49.32$). For fake FRB data, both PoLaR BEAR and BEAR exhibited no outliers, with most detections occuring within $\pm 10$. In both cases, PoLaR BEAR performs as well as BEAR. 
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{Graphs/frbsnrdiff.eps}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{Graphs/fakesnrdiff.eps}
+    \end{minipage}
+    \caption[Histograms of SNR difference]{Histograms of SNR difference in detections from PoLaR BEAR and BEAR for real FRB data (left) and fake FRB data (right).}
+    \label{fig:snrdiff}
+\end{figure}

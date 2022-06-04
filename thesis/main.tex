@@ -1,0 +1,47 @@
+\documentclass{umalayathesis}
+\usepackage[utf8]{inputenc}
+
+\author{Affan Adly bin Nazri}
+\title{Fast Radio Bursts: Detection with Python Language Radio Burst Emission Automatic Roger (PoLaR BEAR)}
+\faculty{Department of Physics\\Faculty of Science}
+\submissionyear{2021}
+\degree{Bachelor of Science in Physics}
+
+\newcommand{\cmp}{\,\text{cm}^{-3}\,\text{pc}}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{textgreek}
+\usepackage{appendix}
+
+\begin{document}
+\frontmatter
+
+\makecoverandtitlepage{\doctoralresearch}
+\declarationpage
+\abstractfromfile{Text/abstract}
+\msabstractfromfile{Text/abstractms}
+\input{Text/acknowledgements}
+
+{\clearpage
+\tableofcontents\clearpage
+\listoffigures\clearpage
+\listoftables\clearpage
+
+\input{Text/acronyms}
+%\listofappendices
+\clearpage}
+
+\mainmatter
+
+\input{Text/intro}
+\input{Text/litrev}
+\input{Text/method}
+\input{Text/results}
+\input{Text/discussion}
+\input{Text/summary}
+
+\bibliography{ref}
+
+%\input{Text/appendix}
+
+\end{document}
